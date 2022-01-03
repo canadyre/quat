@@ -1,0 +1,6 @@
+classes= 20
+train  = /home/canadyre/Dropbox/IC2E_code/voc/adv_train_8.txt
+valid  = /home/canadyre/Dropbox/IC2E_code/voc/2007_test.txt
+names = data/voc.names
+backup = backup_advtrain8_full
+
