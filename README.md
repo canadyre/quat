@@ -16,7 +16,7 @@ To train the models, we followed the training steps located at [yolo](https://pj
 ### Testing on Jetson
 ```
 sudo docker run -it --rm --net=host --runtime nvidia -e DISPLAY=$DISPLAY \\
--v /home/canadyre:/home/canadyre nvcr.io/nvidia/l4t-ml:r32.6.1-py3
+  -v /home/canadyre:/home/canadyre nvcr.io/nvidia/l4t-ml:r32.6.1-py3
 ```
 
 ## FasterRCNN
@@ -30,15 +30,15 @@ python train_simple.py --model faster_rcnn --backbone ${backbone} --root_dir ${d
 ### Testing on Jetson
 ```
 sudo docker run -it --rm --net=host --runtime nvidia -e DISPLAY=$DISPLAY \\
--v /home/canadyre:/home/canadyre nvcr.io/nvidia/l4t-ml:r32.6.1-py3
+  -v /home/canadyre:/home/canadyre nvcr.io/nvidia/l4t-ml:r32.6.1-py3
 
 # Test on attack data
 python test_simple.py --model faster_rcnn --adv True --eval True --backbone ${back} \\
---root_dir ${data_dir} --attack ${att} --attack_bound ${b} --attacked_model ${att_mod} \\
---model_path ${model_path}
+  --root_dir ${data_dir} --attack ${att} --attack_bound ${b} --attacked_model ${att_mod} \\
+  --model_path ${model_path}
 
 #Test on clean data
 python test_simple.py --model faster_rcnn --eval True --backbone ${back} \\
---root_dir ${data_dir} --model_path ${model_path}
+  --root_dir ${data_dir} --model_path ${model_path}
 
 ```
