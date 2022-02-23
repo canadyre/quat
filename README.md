@@ -8,7 +8,8 @@ To start, download the VOCDataset, for ease I have linked the [download page](ht
 The code to attack data is location in the [attack](https://github.com/canadyre/quat/tree/main/attack) directory. To run the attacks, you can either run the script, [run_attacks.sh](https://https://github.com/canadyre/quat/tree/main/fasterrcnn/run_attacks.sh), or directly run one specific attack:
 
 ```
-python tog_attack.py --weights ${att_mod_pth}  --images voc/train.txt --type ${att} --model_type ${att_mod} --eps ${eps}
+python tog_attack.py --weights ${att_mod_pth}  --images voc/train.txt --type ${att} \\
+  --model_type ${att_mod} --eps ${eps}
 ```
 
 ## YOLOv3
